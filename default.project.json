@@ -1,0 +1,17 @@
+{
+  "name": "VfxSystem",
+  "tree": {
+    "$className": "DataModel",
+
+    
+    "Workspace": {
+      "$properties": {
+        "FilteringEnabled": true
+      },
+      "VFXSystem" :{
+        "$path": "src",
+        "$ignoreUnknownInstances": true
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "ignoreUnknownInstances": true,
+  "properties": {
+		"Attributes": {
+			"Fade": {"Bool": true},
+      "FadeTime":{"Float32":0.3},
+      "FadeStyle":{"String":"Quad"}
+		}
+	}
+}
