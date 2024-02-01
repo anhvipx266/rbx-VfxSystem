@@ -65,7 +65,7 @@ function VFXServer:Make(vfxData:VFXData)
         assert(vfxData.Position ~= nil, "VFX data require Position!")
         -- gửi dữ liệu đi
         for _, rme:RemoteEvent in pairs(vfx._remotes or {}) do
-            rme:FireAllClients(nil, vfxData)
+            rme:FireAllClients(vfxData)
         end
     end
 end

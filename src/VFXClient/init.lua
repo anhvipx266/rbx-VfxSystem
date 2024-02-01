@@ -90,7 +90,7 @@ function VFXClient:BindTo(vfx, rme:RemoteEvent)
     if not vfx._remotes then vfx._remotes = {} end
     if not table.find(vfx._remotes, rme) then table.insert(vfx._remotes, rme) end
     if rtb._cn and rtb._cn.Connected then return end
-    rtb._cn = rtb.Remote.OnClientEvent:Connect(function(fplr:Player, vfxData:VFXData)
+    rtb._cn = rtb.Remote.OnClientEvent:Connect(function(vfxData:VFXData)
         -- bỏ qua nếu khoảng cách vượt ngưỡng render
         local distance = (cam.CFrame.Position - vfxData.Position).Magnitude
         if distance > Settings.RenderDistance then return end
