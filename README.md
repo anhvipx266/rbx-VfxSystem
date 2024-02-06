@@ -1,4 +1,4 @@
-- **version: 1.0.1**
+- **version: 1.0.2**
 ## VFX System
 - Là một hệ thống quản lý, tạo, lưu trữ hiệu ứng VFX hoặc thành phần hiệu ứng không tham gia vào logic game.
 

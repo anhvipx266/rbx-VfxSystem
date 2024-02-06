@@ -57,14 +57,16 @@ function VFXClient:Render(vfxData:VFXData)
     return vfx
 end
 -- tạo vfx và gửi đi dữ liệu
-function VFXClient:Make(vfxData:VFXData)
+function VFXClient:Make(vfxData:VFXData, rep:boolean)
     -- tự động hóa Position theo plr cam
     vfxData.Position = vfxData.Position or cam.CFrame.Position
     local vfx = self.VFXs[vfxData.ClassName]
     assert(vfx ~= nil, "VFX's not found or unregister!")
-    -- gửi dữ liệu đi
-    for _, rme:RemoteEvent in pairs(vfx._remotes or {}) do
-        rme:FireServer(vfxData)
+    -- sao chép dữ liệu
+    if rep ~= false then
+        for _, rme:RemoteEvent in pairs(vfx._remotes or {}) do
+            rme:FireServer(vfxData)
+        end
     end
     self:Render(vfxData)
 end
